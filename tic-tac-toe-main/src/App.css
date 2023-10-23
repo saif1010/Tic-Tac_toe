@@ -1,0 +1,90 @@
+/* App.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.app {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+.status {
+  margin-left:20px ; 
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.board-row {
+  display: flex;
+}
+
+.square {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 60px;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.square:hover {
+  background-color: #f8f8f8;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.board-row::after {
+  content: "";
+  flex: 1;
+}
+
+.reset {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-left:20px ;
+  margin-top:20px ;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.reset:hover {
+  background-color: #f8f8f8;
+}
+
+@media (max-width: 600px) {
+  .board-row {
+    flex-wrap: wrap;
+  }
+
+  .square {
+    width: 80px;
+    height: 80px;
+    font-size: 48px;
+    line-height: 80px;
+  }
+}
